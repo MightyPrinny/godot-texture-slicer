@@ -1,0 +1,195 @@
+[gd_scene format=2]
+
+[node name="Window" type="WindowDialog"]
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+margin_bottom = -657.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+popup_exclusive = true
+window_title = "Texture Slicer"
+
+[node name="OkCancel" type="HBoxContainer" parent="."]
+margin_left = 310.639
+margin_top = 192.574
+margin_right = 407.639
+margin_bottom = 212.574
+
+[node name="C" type="Button" parent="OkCancel"]
+margin_right = 54.0
+margin_bottom = 20.0
+text = "Cancel"
+
+[node name="O" type="Button" parent="OkCancel"]
+margin_left = 58.0
+margin_right = 89.0
+margin_bottom = 20.0
+text = "OK"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 38.0
+margin_top = 21.0
+margin_right = 366.0
+margin_bottom = 149.0
+size_flags_horizontal = 3
+
+[node name="Image" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 328.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Image"]
+margin_top = 3.0
+margin_right = 72.0
+margin_bottom = 17.0
+text = "Image file: "
+
+[node name="ImagePath" type="Label" parent="VBoxContainer/Image"]
+margin_left = 76.0
+margin_top = 3.0
+margin_right = 181.0
+margin_bottom = 17.0
+text = "res://path/to/file"
+
+[node name="LoadImage" type="Button" parent="VBoxContainer/Image"]
+margin_left = 185.0
+margin_right = 244.0
+margin_bottom = 20.0
+text = "Choose"
+
+[node name="Output" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 328.0
+margin_bottom = 44.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Output"]
+margin_top = 3.0
+margin_right = 94.0
+margin_bottom = 17.0
+text = "Output folder: "
+
+[node name="OutputPath" type="Label" parent="VBoxContainer/Output"]
+margin_left = 98.0
+margin_top = 3.0
+margin_right = 220.0
+margin_bottom = 17.0
+text = "res://path/to/folder"
+
+[node name="OpenFolder" type="Button" parent="VBoxContainer/Output"]
+margin_left = 224.0
+margin_right = 283.0
+margin_bottom = 20.0
+text = "Choose"
+
+[node name="Dimensions" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 328.0
+margin_bottom = 72.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Dimensions"]
+margin_top = 5.0
+margin_right = 66.0
+margin_bottom = 19.0
+text = "Grid width"
+
+[node name="Width" type="SpinBox" parent="VBoxContainer/Dimensions"]
+margin_left = 70.0
+margin_right = 144.0
+margin_bottom = 24.0
+min_value = 1.0
+max_value = 1e+09
+value = 32.0
+rounded = true
+allow_greater = true
+
+[node name="Label3" type="Label" parent="VBoxContainer/Dimensions"]
+margin_left = 148.0
+margin_top = 5.0
+margin_right = 219.0
+margin_bottom = 19.0
+text = "Grid height"
+
+[node name="Height" type="SpinBox" parent="VBoxContainer/Dimensions"]
+margin_left = 223.0
+margin_right = 297.0
+margin_bottom = 24.0
+min_value = 1.0
+max_value = 1e+09
+value = 32.0
+rounded = true
+allow_greater = true
+
+[node name="Separation" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 76.0
+margin_right = 328.0
+margin_bottom = 100.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Separation"]
+margin_top = 5.0
+margin_right = 85.0
+margin_bottom = 19.0
+text = "H. Separation"
+
+[node name="HSep" type="SpinBox" parent="VBoxContainer/Separation"]
+margin_left = 89.0
+margin_right = 163.0
+margin_bottom = 24.0
+max_value = 1e+09
+rounded = true
+allow_greater = true
+
+[node name="Label3" type="Label" parent="VBoxContainer/Separation"]
+margin_left = 167.0
+margin_top = 5.0
+margin_right = 250.0
+margin_bottom = 19.0
+text = "V. Separation"
+
+[node name="VSep" type="SpinBox" parent="VBoxContainer/Separation"]
+margin_left = 254.0
+margin_right = 328.0
+margin_bottom = 24.0
+max_value = 1e+09
+rounded = true
+allow_greater = true
+
+[node name="Offset" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 104.0
+margin_right = 328.0
+margin_bottom = 128.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Offset"]
+margin_top = 5.0
+margin_right = 51.0
+margin_bottom = 19.0
+text = "X Offset"
+
+[node name="XOff" type="SpinBox" parent="VBoxContainer/Offset"]
+margin_left = 55.0
+margin_right = 129.0
+margin_bottom = 24.0
+max_value = 1e+09
+rounded = true
+allow_greater = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/Offset"]
+margin_left = 133.0
+margin_top = 5.0
+margin_right = 183.0
+margin_bottom = 19.0
+text = "Y Offset"
+
+[node name="YOff" type="SpinBox" parent="VBoxContainer/Offset"]
+margin_left = 187.0
+margin_right = 261.0
+margin_bottom = 24.0
+max_value = 1e+09
+rounded = true
+allow_greater = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
