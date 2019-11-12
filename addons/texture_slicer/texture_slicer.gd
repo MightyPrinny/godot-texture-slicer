@@ -117,17 +117,6 @@ func slice_texture(texture:Texture):
 	var atex_name = get_filename_no_ext(image_path)
 	var total = 0
 	
-	print("x:" + str(x))
-	print("y:" + str(y))
-	print("hsep:" + str(hsep))
-	print("vsep:" + str(vsep))
-	print("wdith:" + str(width))
-	print("height:" + str(height))
-	print("t_width:" + str(t_width))
-	print("t_height:" + str(t_height))
-	print("atex_name:" + str(atex_name))
-	
-	
 	while(x < t_width):
 		if x + width >= t_width:
 				x += width + hsep
@@ -141,7 +130,6 @@ func slice_texture(texture:Texture):
 			atex.atlas = texture
 			atex.region = Rect2(Vector2(x,y),Vector2(width,height))
 			var save_path = output_path+"/"+atex_name+"_"+str(total)+".atlastex"
-			print("saving: "+ save_path)
 			ResourceSaver.save(save_path,atex)
 			
 			y += height + vsep
